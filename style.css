@@ -1,0 +1,204 @@
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  margin: 0;
+  background-color: #0f2e1d; /* тёмно-зелёный */
+  color: #f1f1f1;
+  animation: fadeIn 1.2s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+header {
+  background-color: #1b4d2d;
+  color: white;
+  padding: 30px 20px;
+  text-align: center;
+  position: relative;
+}
+
+header img.logo {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  height: 60px;
+}
+
+nav {
+  background-color: #2e7031;
+  padding: 15px;
+  text-align: center;
+}
+
+nav a {
+  color: #e0ffe0;
+  text-decoration: none;
+  margin: 0 20px;
+  font-weight: bold;
+  font-size: 1.1em;
+  transition: color 0.3s ease;
+}
+
+nav a:hover {
+  color: #ffffff;
+}
+
+section {
+  padding: 50px 20px;
+  max-width: 900px;
+  margin: auto;
+}
+
+h2 {
+  color: #bfffc0;
+  border-bottom: 2px solid #3e8c44;
+  padding-bottom: 5px;
+  margin-top: 40px;
+}
+
+.menu-item {
+  margin-bottom: 30px;
+  animation: fadeIn 0.8s ease;
+}
+
+.menu-item h3 {
+  color: #ffffff;
+  margin-bottom: 8px;
+}
+
+.menu-item p {
+  margin: 0;
+  font-size: 0.95em;
+  color: #d0d0d0;
+}
+
+footer {
+  text-align: center;
+  padding: 20px;
+  background-color: #1f3b26;
+  color: #ccc;
+  font-size: 0.9em;
+}
+
+.registr {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 70vh; /* Уменьшение высоты формы */
+  background-color: #ffffff;
+  color: black;
+  max-width: 500px;
+  width: 100%;
+  padding: 15px; /* Уменьшение внутренних отступов */
+  margin: auto;
+  border-radius: 10px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  animation: fadeIn 1s ease-in-out;
+}
+
+
+.registr h1 {
+  color: #1b4d2d;
+  margin-bottom: 20px;
+  font-size: 2em;
+  text-align: center;
+}
+
+form {
+  width: 100%;
+}
+
+form label {
+  font-size: 1.1em;
+  margin-bottom: 5px;
+}
+
+form input,
+form button {
+  width: 100%;
+  padding: 12px;
+  margin-top: 10px;
+  margin-bottom: 15px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  font-size: 1.1em;
+}
+
+form input[type="number"] {
+  -moz-appearance: textfield;
+}
+
+form button {
+  background-color: darkgreen;
+  color: white;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  font-size: 1.1em;
+}
+
+form button:hover {
+  background-color: orange;
+  color: black;
+}
+
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+
+nav {
+  background-color: #2e7031;
+  padding: 15px;
+  text-align: center;
+}
+
+nav a {
+  color: #e0ffe0;
+  text-decoration: none;
+  margin: 0 20px;
+  font-weight: bold;
+  font-size: 1.1em;
+  transition: color 0.3s ease;
+}
+
+nav a:hover {
+  color: #ffffff;
+}
+
+nav a.active {
+  color: #fff;
+  font-weight: bold;
+}
+
+
+@media (max-width: 768px) {
+  header h1 {
+    font-size: 1.5em;
+  }
+
+  nav a {
+    margin: 0 10px;
+  }
+
+  section {
+    padding: 30px 15px;
+  }
+}
