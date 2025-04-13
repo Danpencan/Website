@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Меню | Вкусно и Точка</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+
+  <header>
+    <h1>Меню ресторана</h1>
+    <p>Познакомьтесь с нашими блюдами</p>
+  </header>
+
+  <nav>
+    <a href="/">Главная</a>
+    <a href="/menu">Меню</a>
+    <a href="https://vkusnoitochka.ru/">Контакты</a>
+    <a href="/registr">Забронировать столик</a>
+  </nav>
+
+  <section>
+    <h2>Горячие блюда</h2>
+
+    <div class="menu-item">
+      <h3>Борщ по-домашнему</h3>
+      <p>Сытный борщ с говядиной и сметаной — 250 ₽</p>
+    </div>
+
+    <div class="menu-item">
+      <h3>Пельмени ручной лепки</h3>
+      <p>Подаются с маслом или сметаной — 300 ₽</p>
+    </div>
+
+    <h2>Салаты</h2>
+
+    <div class="menu-item">
+      <h3>Цезарь с курицей</h3>
+      <p>Классический салат с соусом и пармезаном — 320 ₽</p>
+    </div>
+
+    <h2>Напитки</h2>
+
+    <div class="menu-item">
+      <h3>Компот</h3>
+      <p>Домашний компот из сухофруктов — 80 ₽</p>
+    </div>
+
+    <div class="menu-item">
+      <h3>Морс</h3>
+      <p>Клюквенный морс — 90 ₽</p>
+    </div>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 Ресторан "Вкусно и Точка". Все права защищены.</p>
+  </footer>
+
+</body>
+</html>

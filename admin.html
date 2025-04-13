@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <title>Админка — Бронирования</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+  <style>
+    .admin-container {
+      max-width: 900px;
+      margin: 50px auto;
+      background: white;
+      color: black;
+      padding: 30px;
+      border-radius: 12px;
+      box-shadow: 0 0 20px rgba(0,0,0,0.1);
+      animation: fadeIn 0.8s ease-in-out;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 20px;
+    }
+
+    th, td {
+      border: 1px solid #ccc;
+      padding: 12px;
+      text-align: center;
+    }
+
+    th {
+      background-color: #0f2e1d;
+      color: white;
+    }
+
+    tr:nth-child(even) {
+      background-color: #f9f9f9;
+    }
+
+    h1 {
+      text-align: center;
+      color: #0f2e1d;
+    }
+
+    .back-button {
+      display: block;
+      margin: 20px 0;
+      padding: 10px 20px;
+      background-color: #1b4d2d;
+      color: white;
+      border: none;
+      font-size: 1.2em;
+      text-decoration: none;
+      text-align: center;
+      border-radius: 8px;
+      transition: background-color 0.3s;
+    }
+
+    .back-button:hover {
+      background-color: #2e7031;
+    }
+
+    .filter-container {
+      margin-bottom: 20px;
+      display: flex;
+      justify-content: space-between;
+    }
+
+    .filter-container label,
+    .filter-container input {
+      font-size: 1.1em;
+    }
+  </style>
+</head>
+<body>
+  <div class="admin-container">
+    <h1>Список бронирований</h1>
+
+    <div class="filter-container">
+      <div>
+        <label for="date-filter">Фильтр по дате:</label>
+        <form method="GET" action="/admin/{{ admin_name }}/{{ admin_id }}">
+          <input type="date" id="date-filter" name="date" />
+          <button type="submit">Применить фильтр</button>
+        </form>
+      </div>
+    </div>
+
+    <a href="/" class="back-button">Назад на главную</a>
+
+    {% if bookings %}
+    <table>
+      <tr>
+        <th>Имя</th>
+        <th>Дата</th>
+        <th>Время</th>
+        <th>Гостей</th>
+      </tr>
+      {% for booking in bookings %}
+      <tr>
+        <td>{{ booking.name }}</td>
+        <td>{{ booking.date }}</td>
+        <td>{{ booking.time }}</td>
+        <td>{{ booking.guests }}</td>
+      </tr>
+      {% endfor %}
+    </table>
+    {% else %}
+      <p>Бронирований пока нет.</p>
+    {% endif %}
+  </div>
+</body>
+</html>

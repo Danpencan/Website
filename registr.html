@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Регистрация столика</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class ="registr">
+        <h1>Забронировать столик</h1>
+        <form method="post">
+            <label>Имя:</label><br>
+            <input type="text" name="name" required><br>
+            <label>Дата:</label><br>
+            <input type="date" name="date" required><br>
+            <label>Время:</label><br>
+            <input type="time" name="time" required><br>
+            <label>Количество человек:</label><br>
+            <input type="number" name="guests" min="1" required><br>
+            <br>
+            <button type="submit">Забронировать</button>
+        </form>
+    </div>
+</body>
+</html>
